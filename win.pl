@@ -4,49 +4,49 @@ similarPieces(This, That):-
 	(ThisOne = ThatOne ; ThisTwo = ThatTwo ; ThisThree = ThatThree).
 
 completeFirstRow(Grid):-
-	nth(1, Grid, FirstPiece), nth(2, Grid, SecondPiece), nth(3, Grid, ThirdPiece),
+	nth1(1, Grid, FirstPiece), nth1(2, Grid, SecondPiece), nth1(3, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeSecondRow(Grid):-
-	nth(4, Grid, FirstPiece), nth(5, Grid, SecondPiece), nth(6, Grid, ThirdPiece),
+	nth1(4, Grid, FirstPiece), nth1(5, Grid, SecondPiece), nth1(6, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeThirdRow(Grid):-
-	nth(7, Grid, FirstPiece), nth(8, Grid, SecondPiece), nth(9, Grid, ThirdPiece),
+	nth1(7, Grid, FirstPiece), nth1(8, Grid, SecondPiece), nth1(9, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeFirstCol(Grid):-
-	nth(1, Grid, FirstPiece), nth(4, Grid, SecondPiece), nth(7, Grid, ThirdPiece),
+	nth1(1, Grid, FirstPiece), nth1(4, Grid, SecondPiece), nth1(7, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeSecondCol(Grid):-
-	nth(2, Grid, FirstPiece), nth(5, Grid, SecondPiece), nth(8, Grid, ThirdPiece),
+	nth1(2, Grid, FirstPiece), nth1(5, Grid, SecondPiece), nth1(8, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeThirdCol(Grid):-
-	nth(3, Grid, FirstPiece), nth(6, Grid, SecondPiece), nth(9, Grid, ThirdPiece),
+	nth1(3, Grid, FirstPiece), nth1(6, Grid, SecondPiece), nth1(9, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeNike(Grid):-
-	nth(3, Grid, FirstPiece), nth(5, Grid, SecondPiece), nth(7, Grid, ThirdPiece),
+	nth1(3, Grid, FirstPiece), nth1(5, Grid, SecondPiece), nth1(7, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
 
 completeAntiNike(Grid):-
-	nth(1, Grid, FirstPiece), nth(5, Grid, SecondPiece), nth(9, Grid, ThirdPiece),
+	nth1(1, Grid, FirstPiece), nth1(5, Grid, SecondPiece), nth1(9, Grid, ThirdPiece),
 	similarPieces(FirstPiece, SecondPiece),
 	similarPieces(FirstPiece, ThirdPiece), 
 	similarPieces(SecondPiece, ThirdPiece).	
